@@ -9,7 +9,7 @@ import SemanticSearch from './components/SemanticSearch';
 import DeveloperProfiles from './components/DeveloperProfiles';
 import Architecture from './components/Architecture';
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000/api";
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
